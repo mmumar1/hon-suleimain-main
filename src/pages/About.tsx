@@ -7,8 +7,8 @@ import { statistics } from "@/data/statistics";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { AnimatedCounter } from "@/components/common/AnimatedCounter";
 import * as Icons from "lucide-react";
-const aboutPortrait = "/images/about-portrait.jpg";
-const heroPortrait = "/images/hero-portrait.jpg";
+const aboutPortrait = "/images/hon-image-2.jpeg";
+const heroPortrait = "/images/hon-hero-image.jpeg";
 
 export default function About() {
   useSEO({ title: "About Hon. Suleiman Salihu Usman" });
