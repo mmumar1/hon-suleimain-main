@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Suleiman Salihu Usman — Official Website"
+version = "1.0.0"
+id = "artifacts/suleiman-website"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19227
+
+[services.development]
+run = "pnpm --filter @workspace/suleiman-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/suleiman-website", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/suleiman-website/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19227"
+BASE_PATH = "/"

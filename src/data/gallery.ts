@@ -1,0 +1,20 @@
+export const gallery = [
+  { id: "g1", src: "https://placehold.co/800x600/0a2158/ffffff?text=Community+Meeting+1", alt: "Addressing a community town hall", category: "Community", caption: "Hon. Suleiman addressing a town hall in Gusau." },
+  { id: "g2", src: "https://placehold.co/600x800/0a2158/ffffff?text=Education+Support", alt: "Distributing school supplies", category: "Education", caption: "Distributing educational materials to primary school students." },
+  { id: "g3", src: "https://placehold.co/800x500/0a2158/ffffff?text=Medical+Outreach+1", alt: "Medical outreach program", category: "Healthcare", caption: "Free medical outreach in Maru LGA." },
+  { id: "g4", src: "https://placehold.co/800x800/0a2158/ffffff?text=Stakeholder+Meeting", alt: "Meeting with party stakeholders", category: "Meetings", caption: "Strategic session with NDC party stakeholders." },
+  { id: "g5", src: "https://placehold.co/1024x768/0a2158/ffffff?text=Declaration+Rally", alt: "Massive crowd at declaration rally", category: "Events", caption: "Thousands gather for the official declaration." },
+  { id: "g6", src: "https://placehold.co/600x600/0a2158/ffffff?text=Youth+Volunteers", alt: "Youth volunteers cleaning streets", category: "Volunteer Activities", caption: "Youth volunteer corps leading a sanitation exercise." },
+  { id: "g7", src: "https://placehold.co/800x600/0a2158/ffffff?text=Women+Empowerment", alt: "Women receiving business grants", category: "Community", caption: "Disbursement of grants to market women." },
+  { id: "g8", src: "https://placehold.co/600x800/0a2158/ffffff?text=Tech+Hub+Class", alt: "Students learning at tech hub", category: "Education", caption: "First cohort of the Digital Skills bootcamp." },
+  { id: "g9", src: "https://placehold.co/800x500/0a2158/ffffff?text=Maternal+Care", alt: "Donating equipment to maternity ward", category: "Healthcare", caption: "Equipping a local maternity clinic." },
+  { id: "g10", src: "https://placehold.co/800x800/0a2158/ffffff?text=Traditional+Council", alt: "Consultation with Emirs", category: "Meetings", caption: "Consultation with traditional rulers." },
+  { id: "g11", src: "https://placehold.co/1024x768/0a2158/ffffff?text=Youth+Rally", alt: "Youth solidarity walk", category: "Events", caption: "Youth solidarity walk across the capital." },
+  { id: "g12", src: "https://placehold.co/600x600/0a2158/ffffff?text=Tree+Planting", alt: "Planting trees", category: "Volunteer Activities", caption: "Community tree planting initiative." },
+  { id: "g13", src: "https://placehold.co/800x600/0a2158/ffffff?text=Farmer+Support", alt: "Giving fertilizer to farmers", category: "Community", caption: "Supporting local farmers ahead of planting season." },
+  { id: "g14", src: "https://placehold.co/600x800/0a2158/ffffff?text=Scholarship+Award", alt: "Awarding scholarships", category: "Education", caption: "Annual Scholarship Award Ceremony." },
+  { id: "g15", src: "https://placehold.co/800x500/0a2158/ffffff?text=Ambulance+Donation", alt: "Donating an ambulance", category: "Healthcare", caption: "Donation of an ambulance to the General Hospital." },
+  { id: "g16", src: "https://placehold.co/800x800/0a2158/ffffff?text=Youth+Leaders", alt: "Meeting youth leaders", category: "Meetings", caption: "Engagement with youth leaders and union heads." },
+  { id: "g17", src: "https://placehold.co/1024x768/0a2158/ffffff?text=Campaign+Launch", alt: "Campaign launch", category: "Events", caption: "The official campaign launch event." },
+  { id: "g18", src: "https://placehold.co/600x600/0a2158/ffffff?text=Relief+Materials", alt: "Distributing relief materials", category: "Volunteer Activities", caption: "Volunteers distributing flood relief materials." }
+];
