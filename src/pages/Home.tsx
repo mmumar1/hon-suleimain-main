@@ -114,7 +114,7 @@ export default function Home() {
             
             {/* Floating Badge */}
             {/*
-            <div className="absolute top-1/4 -left-8 bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-4 shadow-xl z-20 hidden lg:flex items-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
+            <div className="absolute top-1/4 -left-8 bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-4 shadow-xl z-20 hidden lg:flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center shadow-lg">
                 <CheckCircle2 className="w-6 h-6" />
               </div>
@@ -514,7 +514,7 @@ export default function Home() {
 function QuoteIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+      <path d="M7 21h4V10H7v11zm6 0h4V10h-4v11z" />
     </svg>
   );
 }
