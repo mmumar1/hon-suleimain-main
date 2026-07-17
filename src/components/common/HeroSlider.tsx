@@ -6,9 +6,7 @@ const images = [
   "/images/hon-hero-image.jpeg",
   "/images/hon-image-1.jpeg",
   "/images/hon-image-2.jpeg",
-  "/images/about-portrait.jpg",
   "/images/hero-portrait.jpg",
-  "/images/program-agric.jpg",
 ];
 
 export function HeroSlider({ className }: { className?: string }) {
