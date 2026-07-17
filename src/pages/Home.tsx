@@ -27,7 +27,7 @@ const iconMap: Record<string, FC<LucideProps>> = {
   BookOpen, HeartPulse, Wheat, Users, Flower, Laptop, Building2, Briefcase, ShieldCheck,
   Heart, Eye, Zap, TrendingUp, FolderOpen, MapPin
 };
-const heroPortrait = "/images/hon-hero-image.jpeg";
+//const heroPortrait = "/images/hon-hero-image.jpeg";
 const aboutPortrait = "/images/hon-image-2.jpeg";
 
 export default function Home() {
