@@ -100,6 +100,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
+          {/*
           <motion.div variants={scaleIn} initial="hidden" animate="visible" className="relative h-[600px] lg:h-[800px] hidden lg:block z-10">
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 rounded-[2.5rem]" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent z-10 rounded-[2.5rem]" />
@@ -125,6 +126,7 @@ export default function Home() {
             </div>
                 */}
           </motion.div>
+          */}
         </div>
     
 
