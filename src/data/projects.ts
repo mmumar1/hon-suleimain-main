@@ -13,7 +13,7 @@ export const projects = [
     endDate: "2023-06-15",
     partners: ["Zamfara Water Board", "Clean Water Africa NGO"],
     status: "Completed",
-    featuredImage: "https://placehold.co/800x500/0a2158/ffffff?text=Clean+Water+Initiative"
+    featuredImage: "/images/impact-clean-water.jpg"
   },
   {
     id: "school-rehabilitation",
@@ -29,7 +29,7 @@ export const projects = [
     endDate: "2023-09-30",
     partners: ["Local Education Authority", "Community Development Committees"],
     status: "Completed",
-    featuredImage: "https://placehold.co/800x500/0a2158/ffffff?text=School+Rehabilitation"
+    featuredImage: "/images/impact-school.jpg"
   },
   {
     id: "health-center-upgrade",
@@ -45,7 +45,7 @@ export const projects = [
     endDate: "2023-02-20",
     partners: ["State Ministry of Health"],
     status: "Completed",
-    featuredImage: "https://placehold.co/800x500/0a2158/ffffff?text=Healthcare+Upgrade"
+    featuredImage: "/images/impact-healthcare.jpg"
   },
   {
     id: "tech-hub-launch",
@@ -61,7 +61,7 @@ export const projects = [
     endDate: "Ongoing",
     partners: ["TechForGood Nigeria"],
     status: "Active",
-    featuredImage: "https://placehold.co/800x500/0a2158/ffffff?text=Youth+Tech+Hub"
+    featuredImage: "/images/impact-tech-hub.jpg"
   },
   {
     id: "market-reconstruction",
@@ -77,7 +77,7 @@ export const projects = [
     endDate: "2022-12-05",
     partners: ["Market Women Association", "Local Government Council"],
     status: "Completed",
-    featuredImage: "https://placehold.co/800x500/0a2158/ffffff?text=Market+Expansion"
+    featuredImage: "/images/impact-market.jpg"
   },
   {
     id: "agric-mechanization",
