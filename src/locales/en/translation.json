@@ -1,0 +1,84 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "vision": "Vision",
+    "community_impact": "Community Impact",
+    "programs": "Programs",
+    "news": "News",
+    "gallery": "Gallery",
+    "media": "Media",
+    "volunteer": "Volunteer",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "NDC Aspirant, Zamfara State",
+    "title": "Leadership Rooted in Service",
+    "subtitle": "Building Opportunities for Every Community in Zamfara State.",
+    "cta_vision": "Explore My Vision",
+    "cta_programs": "Community Programs",
+    "watch": "Watch My Story",
+    "badge_title": "Proven Community Leadership",
+    "badge_sub": "15+ Years in Service",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "section_title": "Meet Hon. Suleiman",
+    "read_bio": "Read Full Biography"
+  },
+  "vision": {
+    "section_title": "My Vision for Zamfara",
+    "section_sub": "A comprehensive plan to uplift our communities through strategic investments in key sectors.",
+    "view_all": "View All Policy Areas"
+  },
+  "impact": {
+    "section_title": "Community Impact",
+    "section_sub": "Real projects delivering tangible results for the people of Zamfara State.",
+    "beneficiaries": "Beneficiaries",
+    "location": "Location",
+    "read_case": "Read Case Study",
+    "view_all": "View All Impact Projects"
+  },
+  "programs": {
+    "section_title": "Active Programs",
+    "section_sub": "Initiatives designed to empower, educate, and elevate our people.",
+    "view_all": "View All Programs"
+  },
+  "testimonials": {
+    "title": "Voices from the Community",
+    "subtitle": "Don't just take our word for it. Hear from the people whose lives have been impacted."
+  },
+  "news": {
+    "section_title": "Latest Updates",
+    "section_sub": "News, announcements, and insights from the campaign trail.",
+    "read_more": "Read More News"
+  },
+  "volunteer": {
+    "title": "Join the Movement",
+    "subtitle": "We cannot do this alone. Be part of the change by volunteering your time, skills, or voice to help us build a better Zamfara.",
+    "cta": "Volunteer Now",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "tagline": "Leadership rooted in service. Building opportunities for every community in Zamfara State under the Nigeria Democratic Congress (NDC).",
+    "for_zamfara": "For Zamfara",
+    "quick_links": "Quick Links",
+    "bio": "Biography",
+    "vision_policy": "Vision & Policy",
+    "programs": "Empowerment Programs",
+    "latest_news": "Latest News",
+    "volunteer": "Volunteer",
+    "contact_heading": "Contact Us",
+    "newsletter_heading": "Newsletter",
+    "newsletter_sub": "Stay updated with our latest community programs and initiatives.",
+    "email_placeholder": "Email address",
+    "rights": "All rights reserved.",
+    "ndc": "Nigeria Democratic Congress",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "language": {
+    "english": "English",
+    "hausa": "Hausa"
+  }
+}

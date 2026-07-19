@@ -1,0 +1,84 @@
+{
+  "navigation": {
+    "home": "Gida",
+    "about": "Game da shi",
+    "vision": "Manufa",
+    "community_impact": "Tasirin Al'umma",
+    "programs": "Shirye-shirye",
+    "news": "Labarai",
+    "gallery": "Gidan Hoto",
+    "media": "Kafofin Watsa Labarai",
+    "volunteer": "Aikin Sa-kai",
+    "contact": "Tuntuɓa"
+  },
+  "hero": {
+    "badge": "Dan Takara na NDC, Jihar Zamfara",
+    "title": "Jagoranci da Aka Gina akan Hidima",
+    "subtitle": "Gina Dama ga Kowane Al'umma a Jihar Zamfara.",
+    "cta_vision": "Duba Manufata",
+    "cta_programs": "Shirye-shiryen Al'umma",
+    "watch": "Kalli Labarina",
+    "badge_title": "Jagorancin Al'umma da Aka Tabbatar",
+    "badge_sub": "Shekaru 15+ a Hidima",
+    "scroll": "Zazzage"
+  },
+  "about": {
+    "section_title": "Sanin Masha. Suleiman",
+    "read_bio": "Karanta Tarihin Rayuwa Duka"
+  },
+  "vision": {
+    "section_title": "Manufata ga Zamfara",
+    "section_sub": "Tsarin da ya hada kan dukkan fannoni don inganta al'ummominmu ta hanyar saka hannun jari mai hikima.",
+    "view_all": "Duba Dukkan Manufofin"
+  },
+  "impact": {
+    "section_title": "Tasirin Al'umma",
+    "section_sub": "Ayyuka na gaskiya da ke kawo sakamako mai ƙarfi ga mutanen Jihar Zamfara.",
+    "beneficiaries": "Masu Amfani",
+    "location": "Wuri",
+    "read_case": "Karanta Binciken",
+    "view_all": "Duba Dukkan Ayyukan Tasiri"
+  },
+  "programs": {
+    "section_title": "Shirye-shiryen Da Ke Gudana",
+    "section_sub": "Shirye-shirye da aka tsara don ƙarfafa, ilimantarwa, da ɗaukaka mutanenmu.",
+    "view_all": "Duba Dukkan Shirye-shirye"
+  },
+  "testimonials": {
+    "title": "Muryoyin Al'umma",
+    "subtitle": "Kada ku dogara da maganarmu kawai. Ku ji daga mutanen da rayuwarsu ta canza."
+  },
+  "news": {
+    "section_title": "Sabbin Labarai",
+    "section_sub": "Labarai, sanarwa, da bayanai daga tafiyar yakin neman zabe.",
+    "read_more": "Karanta Ƙarin Labarai"
+  },
+  "volunteer": {
+    "title": "Shiga Motsi",
+    "subtitle": "Ba za mu iya yin wannan kadai ba. Ku zama wani ɓangare na canjin ta hanyar sa-kai, fasaha, ko murya don taimaka mana gina Zamfara mafi kyau.",
+    "cta": "Yi Aikin Sa-kai Yanzu",
+    "contact": "Tuntuɓe mu"
+  },
+  "footer": {
+    "tagline": "Jagoranci da aka gina akan hidima. Gina dama ga kowane al'umma a Jihar Zamfara ƙarƙashin Majalisar Dimokraɗiyyar Najeriya (NDC).",
+    "for_zamfara": "Don Zamfara",
+    "quick_links": "Hanyoyin Sauri",
+    "bio": "Tarihin Rayuwa",
+    "vision_policy": "Manufa da Manufofin",
+    "programs": "Shirye-shiryen Ƙarfafawa",
+    "latest_news": "Sabbin Labarai",
+    "volunteer": "Aikin Sa-kai",
+    "contact_heading": "Tuntuɓa",
+    "newsletter_heading": "Jarida ta Zamani",
+    "newsletter_sub": "Kasance kana sanin sabbin shirye-shiryen al'ummarmu da ayyukan da muke yi.",
+    "email_placeholder": "Adireshin Imel",
+    "rights": "Dukkan haƙƙoƙi na da kyau.",
+    "ndc": "Majalisar Dimokraɗiyyar Najeriya",
+    "privacy": "Manufar Sirri",
+    "terms": "Sharuɗɗan Amfani"
+  },
+  "language": {
+    "english": "English",
+    "hausa": "Hausa"
+  }
+}

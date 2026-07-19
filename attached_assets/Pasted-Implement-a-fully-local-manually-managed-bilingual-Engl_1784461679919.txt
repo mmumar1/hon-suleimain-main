@@ -1,0 +1,240 @@
+Implement a fully local, manually managed bilingual (English/Hausa) internationalization system for the existing React application.
+
+IMPORTANT
+
+- Do NOT use Google Translate.
+- Do NOT use AI translation APIs.
+- Do NOT use any online translation services.
+- All Hausa translations must be stored locally in JSON files.
+- Preserve the current project architecture.
+- Do NOT refactor unrelated components.
+- Do NOT change routing or layouts except where necessary to add the language selector.
+
+==================================================
+1. INSTALLATION
+==================================================
+
+Install the following packages:
+
+- i18next
+- react-i18next
+- i18next-browser-languagedetector
+
+==================================================
+2. LOCALIZATION STRUCTURE
+==================================================
+
+Create the following structure:
+
+src/
+    i18n/
+        index.ts (or index.js depending on the project)
+    locales/
+        en/
+            translation.json
+        ha/
+            translation.json
+
+Keep all translations inside these JSON files only.
+
+==================================================
+3. TRANSLATION FILES
+==================================================
+
+Create matching English and Hausa translation files.
+
+Begin by translating the existing homepage navigation and common UI text only.
+
+Examples include:
+
+Navigation
+
+Home
+About
+Vision
+Programs
+Community Impact
+News
+Gallery
+Volunteer
+Contact
+
+Common Buttons
+
+Learn More
+Read More
+Explore
+Apply Now
+Get Started
+Donate
+View All
+See More
+Contact Us
+Watch Video
+
+Hero
+
+Main heading
+Subheading
+CTA buttons
+
+Footer
+
+Newsletter
+Subscribe
+Quick Links
+Contact Information
+Follow Us
+Privacy Policy
+
+Language Selector
+
+English
+Hausa
+
+The Hausa translations must be written manually and stored locally.
+
+Do not call any translation service.
+
+==================================================
+4. i18next CONFIGURATION
+==================================================
+
+Create a reusable i18n configuration.
+
+Requirements:
+
+- LanguageDetector enabled
+- Browser language detection
+- LocalStorage persistence
+- Fallback language: English
+- Default language: English
+- JSON resources imported locally
+- React integration via initReactI18next
+- Safe interpolation configuration
+
+The configuration should be reusable for future languages.
+
+==================================================
+5. APPLICATION INITIALIZATION
+==================================================
+
+Load the i18n configuration once from the application's entry point.
+
+Do not initialize it multiple times.
+
+==================================================
+6. COMPONENT INTEGRATION
+==================================================
+
+Use the useTranslation() hook throughout the application.
+
+Replace hardcoded strings with translation keys.
+
+Example:
+
+t("home.hero.title")
+
+rather than
+
+t("welcome")
+
+Organize translation keys hierarchically for maintainability.
+
+Example structure:
+
+navigation.*
+
+hero.*
+
+about.*
+
+vision.*
+
+programs.*
+
+gallery.*
+
+news.*
+
+volunteer.*
+
+contact.*
+
+footer.*
+
+buttons.*
+
+common.*
+
+This architecture should scale easily as the project grows.
+
+==================================================
+7. LANGUAGE SWITCHER
+==================================================
+
+Create a reusable LanguageSwitcher component.
+
+Place it in the top-right area of the navigation bar.
+
+Requirements:
+
+- English button
+- Hausa button
+- Active language highlighted
+- Modern styling
+- Responsive
+- Keyboard accessible
+- Uses i18n.changeLanguage()
+- Persists the user's selection
+- Does not reload the page
+
+Use semantic styling consistent with the existing design system.
+
+==================================================
+8. FUTURE-PROOF ARCHITECTURE
+==================================================
+
+Design the localization system so adding another language only requires:
+
+- Creating a new locale folder
+- Adding a translation.json
+- Registering the language
+
+No component changes should be required.
+
+==================================================
+9. CODE QUALITY
+==================================================
+
+Do not duplicate translation logic.
+
+Create reusable helper utilities where appropriate.
+
+Follow the existing TypeScript/React architecture.
+
+Maintain ESLint compatibility.
+
+==================================================
+10. ACCEPTANCE CRITERIA
+==================================================
+
+The application should:
+
+✅ Detect browser language
+
+✅ Default to English
+
+✅ Allow switching between English and Hausa instantly
+
+✅ Persist the selected language
+
+✅ Use locally stored JSON translations only
+
+✅ Contain no external translation API
+
+✅ Preserve the existing UI and routing
+
+✅ Be easily extendable to additional Nigerian languages in the future
+
+Only implement the internationalization framework and integrate it with the existing UI. Do not redesign any pages.

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Play, ArrowRight, CheckCircle2, FolderOpen, Users, Zap, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { fadeUp, staggerContainer, scaleIn, fadeLeft, fadeRight } from "@/animations/variants";
 import { useSEO } from "@/hooks/useSEO";
 import { statistics } from "@/data/statistics";
@@ -32,6 +33,7 @@ const aboutPortrait = "/images/hon-image-2.jpeg";
 
 export default function Home() {
   useSEO();
+  const { t } = useTranslation();
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -46,7 +48,7 @@ export default function Home() {
     onSelect();
     emblaApi.on('select', onSelect);
     emblaApi.on('reInit', onSelect);
-    
+
     const interval = setInterval(() => {
       emblaApi.scrollNext();
     }, 5000);
@@ -66,29 +68,29 @@ export default function Home() {
       {/* 1. HeroSection */}
       <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
         <HeroSlider />
-        
-        <div className="container mx-auto px-4 md:px-6 z-10 grid lg:grid-cols-1 gap-12 items-center relative">
+
+        <div className="container mx-auto px-4 md:px-6 z-10 grid lg:grid-cols-2 gap-12 items-center relative">
           <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="pt-10 lg:pt-0">
             <motion.div variants={fadeUp}>
               <Badge className="mb-6 py-1.5 px-4 text-sm bg-white/10 text-white backdrop-blur border-white/20">
-                NDC Aspirant, Zamfara State
+                {t("hero.badge")}
               </Badge>
             </motion.div>
-            
+
             <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-[1.05] mb-6">
-              Leadership <br/>Rooted in Service
+              {t("hero.title")}
             </motion.h1>
-            
+
             <motion.p variants={fadeUp} className="text-xl md:text-2xl text-white/80 mb-8 font-light leading-relaxed max-w-lg">
-              Building Opportunities for Every Community in Zamfara State.
+              {t("hero.subtitle")}
             </motion.p>
-            
+
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4 items-center">
               <Link href="/vision" className="px-8 py-4 bg-white text-primary rounded-full font-bold text-lg hover:-translate-y-1 transition-transform shadow-2xl block">
-                Explore My Vision
+                {t("hero.cta_vision")}
               </Link>
               <Link href="/programs" className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors block">
-                Community Programs
+                {t("hero.cta_programs")}
               </Link>
             </motion.div>
 
@@ -96,16 +98,35 @@ export default function Home() {
               <button className="w-14 h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all">
                 <Play className="w-6 h-6 ml-1 fill-white" />
               </button>
-              <span className="font-semibold text-white">Watch My Story</span>
+              <span className="font-semibold text-white">{t("hero.watch")}</span>
             </motion.div>
           </motion.div>
 
-          {/* Portrait rectangle commented out - was: motion.div with scaleIn animation, gradients, and hero image */}
+          <motion.div variants={scaleIn} initial="hidden" animate="visible" className="relative h-[600px] lg:h-[800px] hidden lg:block z-10">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 rounded-[2.5rem]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent z-10 rounded-[2.5rem]" />
+            <img
+              src={heroPortrait}
+              alt="Hon. Suleiman Salihu Usman"
+              className="object-cover w-full h-full object-bottom rounded-[2.5rem] ring-4 ring-white/30 shadow-[0_0_80px_rgba(255,255,255,0.15)] relative z-0"
+            />
+
+            {/* Floating Badge */}
+            <div className="absolute top-1/4 -left-8 bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-4 shadow-xl z-20 hidden lg:flex items-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
+              <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center shadow-lg">
+                <CheckCircle2 className="w-6 h-6" />
+              </div>
+              <div>
+                <div className="text-sm font-bold text-white">{t("hero.badge_title")}</div>
+                <div className="text-xs text-white/80">{t("hero.badge_sub")}</div>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce text-white z-20">
-          <span className="text-xs font-bold uppercase tracking-widest mb-2">Scroll</span>
+          <span className="text-xs font-bold uppercase tracking-widest mb-2">{t("hero.scroll")}</span>
           <ArrowRight className="w-5 h-5 rotate-90" />
         </div>
       </section>
@@ -117,9 +138,9 @@ export default function Home() {
             {statistics.map((stat, index) => {
               const statIcons = [FolderOpen, Users, Zap, MapPin];
               const StatIcon = statIcons[index % statIcons.length];
-              
+
               return (
-                <motion.div 
+                <motion.div
                   key={index}
                   variants={fadeUp}
                   initial="hidden"
@@ -150,7 +171,7 @@ export default function Home() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
+            <motion.div
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -159,9 +180,9 @@ export default function Home() {
             >
               <div className="absolute -inset-4 bg-primary/10 rounded-[2.5rem] blur-xl -z-10" />
               <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl">
-                <img 
-                  src={aboutPortrait} 
-                  alt="Hon. Suleiman at community event" 
+                <img
+                  src={aboutPortrait}
+                  alt="Hon. Suleiman at community event"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -173,18 +194,18 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
             >
-              <SectionHeader title="Meet Hon. Suleiman" align="left" />
+              <SectionHeader title={t("about.section_title")} align="left" />
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-10">
                 <p>{aboutData.bio[0]}</p>
                 <p>{aboutData.bio[1]}</p>
               </div>
-              
+
               <ul className="space-y-6 mb-10">
                 {aboutData.values.slice(0, 3).map((value, i) => {
                   const Icon = iconMap[value.icon];
@@ -203,7 +224,7 @@ export default function Home() {
               </ul>
 
               <Link href="/about" className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-full font-bold hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
-                Read Full Biography <ArrowRight className="w-5 h-5 ml-2" />
+                {t("about.read_bio")} <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </motion.div>
           </div>
@@ -214,12 +235,12 @@ export default function Home() {
       <section className="py-24 bg-slate-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/40 via-transparent to-transparent pointer-events-none" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <SectionHeader 
-            title="My Vision for Zamfara" 
-            subtitle="A comprehensive plan to uplift our communities through strategic investments in key sectors."
+          <SectionHeader
+            title={t("vision.section_title")}
+            subtitle={t("vision.section_sub")}
           />
-          
-          <motion.div 
+
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -229,7 +250,7 @@ export default function Home() {
             {visionAreas.slice(0, 6).map((vision, index) => {
               const Icon = iconMap[vision.icon];
               return (
-                <motion.div 
+                <motion.div
                   key={index}
                   variants={fadeUp}
                   whileHover={{ y: -4 }}
@@ -247,7 +268,7 @@ export default function Home() {
 
           <div className="mt-16 text-center">
             <Link href="/vision" className="inline-flex items-center font-bold text-primary hover:text-primary/80 uppercase tracking-wide group">
-              View All Policy Areas <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+              {t("vision.view_all")} <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
             </Link>
           </div>
         </div>
@@ -256,16 +277,16 @@ export default function Home() {
       {/* 5. CommunityImpactPreview */}
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader 
-            title="Community Impact" 
-            subtitle="Real projects delivering tangible results for the people of Zamfara State."
+          <SectionHeader
+            title={t("impact.section_title")}
+            subtitle={t("impact.section_sub")}
           />
 
           <div className="space-y-32">
             {featuredProjects.map((project, index) => {
               const isEven = index % 2 === 0;
               return (
-                <motion.div 
+                <motion.div
                   key={project.id}
                   initial="hidden"
                   whileInView="visible"
@@ -275,14 +296,14 @@ export default function Home() {
                     !isEven && "lg:grid-flow-col-dense"
                   )}
                 >
-                  <motion.div 
+                  <motion.div
                     variants={isEven ? fadeRight : fadeLeft}
                     className={cn("relative h-full", !isEven && "lg:col-start-2")}
                   >
                     <div className="aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl relative">
-                      <img 
-                        src={project.featuredImage} 
-                        alt={project.title} 
+                      <img
+                        src={project.featuredImage}
+                        alt={project.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                       />
                       <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
@@ -291,28 +312,28 @@ export default function Home() {
                       {project.status}
                     </Badge>
                   </motion.div>
-                  
-                  <motion.div 
+
+                  <motion.div
                     variants={isEven ? fadeLeft : fadeRight}
                     className={cn(!isEven && "lg:col-start-1")}
                   >
                     <Badge variant="outline" className="mb-4">{project.category}</Badge>
                     <h3 className="text-3xl font-extrabold text-foreground mb-6 leading-tight">{project.title}</h3>
                     <p className="text-lg text-muted-foreground leading-relaxed mb-8">{project.overview}</p>
-                    
+
                     <div className="grid grid-cols-2 gap-6 mb-8">
                       <div className="bg-white border shadow-sm p-5 rounded-2xl">
-                        <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Beneficiaries</div>
+                        <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">{t("impact.beneficiaries")}</div>
                         <div className="text-2xl font-extrabold text-foreground">{project.beneficiaries}</div>
                       </div>
                       <div className="bg-white border shadow-sm p-5 rounded-2xl">
-                        <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Location</div>
+                        <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">{t("impact.location")}</div>
                         <div className="text-2xl font-extrabold text-foreground">{project.location}</div>
                       </div>
                     </div>
 
                     <Link href="/community-impact" className="inline-flex items-center text-primary font-bold hover:underline">
-                      Read Case Study <ArrowRight className="w-5 h-5 ml-2" />
+                      {t("impact.read_case")} <ArrowRight className="w-5 h-5 ml-2" />
                     </Link>
                   </motion.div>
                 </motion.div>
@@ -322,7 +343,7 @@ export default function Home() {
 
           <div className="mt-24 text-center">
             <Link href="/community-impact" className="inline-flex items-center px-10 py-4 bg-foreground text-white rounded-full font-bold hover:bg-foreground/90 transition-all shadow-xl hover:-translate-y-1">
-              View All Impact Projects
+              {t("impact.view_all")}
             </Link>
           </div>
         </div>
@@ -331,12 +352,12 @@ export default function Home() {
       {/* 6. ProgramsPreview */}
       <section className="py-24 bg-slate-50 relative">
         <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader 
-            title="Active Programs" 
-            subtitle="Initiatives designed to empower, educate, and elevate our people."
+          <SectionHeader
+            title={t("programs.section_title")}
+            subtitle={t("programs.section_sub")}
           />
 
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -352,7 +373,7 @@ export default function Home() {
 
           <div className="mt-16 text-center">
             <Link href="/programs" className="inline-flex items-center font-bold text-primary hover:text-primary/80 uppercase tracking-wide group">
-              View All Programs <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+              {t("programs.view_all")} <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
             </Link>
           </div>
         </div>
@@ -370,10 +391,10 @@ export default function Home() {
             viewport={{ once: true, margin: "-50px" }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
-              Voices from the Community
+              {t("testimonials.title")}
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-white max-w-2xl mx-auto">
-              Don't just take our word for it. Hear from the people whose lives have been impacted.
+              {t("testimonials.subtitle")}
             </p>
             <div className="h-1.5 w-24 bg-primary mt-6 rounded-full mx-auto" />
           </motion.div>
@@ -401,7 +422,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          
+
           <div className="flex justify-center gap-3 mt-12">
             {testimonials.map((_, index) => (
               <button
@@ -422,12 +443,12 @@ export default function Home() {
       <section className="py-28 bg-white relative">
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
         <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader 
-            title="Latest Updates" 
-            subtitle="News, announcements, and insights from the campaign trail."
+          <SectionHeader
+            title={t("news.section_title")}
+            subtitle={t("news.section_sub")}
           />
 
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -443,7 +464,7 @@ export default function Home() {
 
           <div className="mt-16 text-center">
             <Link href="/news" className="inline-flex items-center font-bold text-primary hover:text-primary/80 uppercase tracking-wide group">
-              Read More News <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+              {t("news.read_more")} <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
             </Link>
           </div>
         </div>
@@ -454,7 +475,7 @@ export default function Home() {
         <div className="absolute inset-0 hero-pattern opacity-20" />
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/30 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
-        
+
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div
             variants={fadeUp}
@@ -463,19 +484,21 @@ export default function Home() {
             viewport={{ once: true, margin: "-80px" }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">Join the Movement</h2>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
+              {t("volunteer.title")}
+            </h2>
             <p className="text-xl text-white/90 mb-12 leading-relaxed max-w-2xl mx-auto">
-              We cannot do this alone. Be part of the change by volunteering your time, skills, or voice to help us build a better Zamfara.
+              {t("volunteer.subtitle")}
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <motion.div whileHover={{ scale: 1.02 }}>
                 <Link href="/volunteer" className="px-10 py-5 bg-white text-primary rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-xl block">
-                  Volunteer Now
+                  {t("volunteer.cta")}
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.02 }}>
                 <Link href="/contact" className="px-10 py-5 bg-transparent border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-primary transition-all block">
-                  Contact Us
+                  {t("volunteer.contact")}
                 </Link>
               </motion.div>
             </div>
