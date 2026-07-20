@@ -102,26 +102,38 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          <motion.div variants={scaleIn} initial="hidden" animate="visible" className="relative h-[600px] lg:h-[800px] hidden lg:block z-10">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 rounded-[2.5rem]" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent z-10 rounded-[2.5rem]" />
-            <img
-              src={heroPortrait}
-              alt="Hon. Suleiman Salihu Usman"
-              className="object-cover w-full h-full object-bottom rounded-[2.5rem] ring-4 ring-white/30 shadow-[0_0_80px_rgba(255,255,255,0.15)] relative z-0"
-            />
+       {/* Hero Image Container (Temporarily Disabled)
+<motion.div
+  variants={scaleIn}
+  initial="hidden"
+  animate="visible"
+  className="relative h-[600px] lg:h-[800px] hidden lg:block z-10"
+>
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 rounded-[2.5rem]" />
+  <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent z-10 rounded-[2.5rem]" />
 
-            {/* Floating Badge */}
-            <div className="absolute top-1/4 -left-8 bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-4 shadow-xl z-20 hidden lg:flex items-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
-              <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center shadow-lg">
-                <CheckCircle2 className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-sm font-bold text-white">{t("hero.badge_title")}</div>
-                <div className="text-xs text-white/80">{t("hero.badge_sub")}</div>
-              </div>
-            </div>
-          </motion.div>
+  <img
+    src={heroPortrait}
+    alt="Hon. Suleiman Salihu Usman"
+    className="object-cover w-full h-full object-bottom rounded-[2.5rem] ring-4 ring-white/30 shadow-[0_0_80px_rgba(255,255,255,0.15)] relative z-0"
+  />
+
+  <div className="absolute top-1/4 -left-8 bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-4 shadow-xl z-20 hidden lg:flex items-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
+    <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center shadow-lg">
+      <CheckCircle2 className="w-6 h-6" />
+    </div>
+
+    <div>
+      <div className="text-sm font-bold text-white">
+        {t("hero.badge_title")}
+      </div>
+      <div className="text-xs text-white/80">
+        {t("hero.badge_sub")}
+      </div>
+    </div>
+  </div>
+</motion.div>
+*/}
         </div>
 
         {/* Scroll Indicator */}
